@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="table">
@@ -52,7 +52,47 @@
 
     </tbody>
   </table>
+    <form class="form">
+      <input type="text" class="input" name="sender_fullname" placeholder="Имя отправителя">
+      <select>
+        <option label="Худжанд" name="sender_city_id" value="1" selected></option>
+        <option label="Душанбе" name="sender_city_id" value="2" selected></option>
+      </select>
+      <input type="text" class="input" name="sender_phone" placeholder="Телефон отправителя">
+      <input type="text" class="input" name="sender_address" placeholder="Адрес отправителя">
+      <input type="text" class="input" name="recipient_fullname" placeholder="Имя получателя">
+      <select>
+        <option label="Худжанд" name="recipient_city_id" value="1" selected></option>
+        <option label="Душанбе" name="recipient_city_id" value="2" selected></option>
+      </select>
+          <input type="text" class="input" name="sender_address" placeholder="Адрес получателя">
+          <select>
+            <option label="1" name="delivery_rate_id" value="1" selected></option>
+            <option label="2" name="delivery_rate_id" value="2" selected></option>
+          </select>
+          <select>
+            <option label="1" name="delivery_option_id" value="1" selected></option>
+            <option label="2" name="delivery_option_id" value="2" selected></option>
+            <option label="3" name="delivery_option_id" value="3" selected></option>
+            <option label="4" name="delivery_option_id" value="4" selected></option>
+          </select>
+          <select>
+            <option label="1" name="cargo_type_id" value="1" selected></option>
+            <option label="2" name="cargo_type_id" value="2" selected></option>
+          </select>
+            <input type="text" class="input" name="cargo_weight" placeholder="Вес груза">
+            <input type="text" class="input" name="cargo_desc" placeholder="Описание груза">
+            <input type="text" class="input" name="cargo_count" placeholder="Количество груза">
+            <input type="text" class="input" name="user_create_order" placeholder="Пользователь создающий заказ">
+            <input type="text" class="input" name="sum_order" placeholder="Cумма груза">
+            <input type="datetime-local" name="pick_time">
+
+      <button type="submit" class="button form__button">
+        Отправить
+      </button>
+    </form>
   </div>
-  <script src="/js/main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sendToApi.js"></script>
 </body>
 </html>
