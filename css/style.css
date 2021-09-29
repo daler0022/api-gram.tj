@@ -1,0 +1,10 @@
+th{
+  
+  background-color: cornflowerblue;
+  border-radius: 2px;
+  color: antiquewhite;
+}
+tbody td {
+  border-right: 1px solid black;
+  text-align: center;
+}
