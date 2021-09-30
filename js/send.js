@@ -18,13 +18,13 @@ formdata.append("sum_order", "123 ");
 formdata.append("user_create_order", "d ");
 formdata.append("driver_id", "1");
 
-var requestOptions = {
+
+
+fetch("https://api.gram.tj/orders", {
   method: 'POST',
   body: formdata,
   redirect: 'follow'
-};
-
-fetch("https://api.gram.tj/orders", requestOptions)
+})
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
