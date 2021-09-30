@@ -13,7 +13,10 @@ form.addEventListener('submit', (event) => {
 
   fetch('https://api.gram.tj/orders', {
       method: 'POST',
-      body: JSON.stringify(data)
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
     })
     .then(response => {
       if (response.status === 200 || response.status === 201) {
