@@ -23,7 +23,6 @@ formdata.append("driver_id", "1");
 fetch("https://api.gram.tj/orders", {
   method: 'POST',
   body: formdata,
-  redirect: 'follow'
 })
   .then(response => response.text())
   .then(result => console.log(result))
