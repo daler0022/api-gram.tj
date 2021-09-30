@@ -11,16 +11,16 @@ formdata.append("delivery_rate_id", "3 ");
 formdata.append("delivery_option_id", "1 ");
 formdata.append("pick_time", "2021-09-20 12:11:34 ");
 formdata.append("cargo_type_id", "1 ");
-formdata.append("cargo_weight", "25 ");
+formdata.append("cargo_weight", 12);
 formdata.append("cargo_count", "5 ");
 formdata.append("cargo_desc", "123456789 ");
-formdata.append("sum_order", "123 ");
+formdata.append("sum_order", 123);
 formdata.append("user_create_order", "d ");
 formdata.append("driver_id", "1");
 
 
 
-fetch("https://api.gram.tj/orders", {
+fetch("http://localhost:8000/orders", {
   method: 'POST',
   body: formdata,
 })
