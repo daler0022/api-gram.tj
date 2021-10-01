@@ -18,54 +18,54 @@
       <th>Sender Phone</th>
       <th>Sender Address</th>
       <th>Recipient Fullname</th>
-      <th>recipient_country_id</th>
-      <th>recipient_city_id</th>
-      <th>recipient_phone"</th>
-      <th>"recipient_address</th>
-      <th>delivery_rate_id</th>
-      <th>"delivery_option_id</th>
-      <th>cargo_type_id"</th>
-      <th>cargo_weight</th>
-      <th>cargo_desc</th>
-      <th>"cargo_count</th>
-      <th>"managers_desc</th>
-      <th>order_status_id</th>
-      <th>start_latitude</th>
-      <th>start_longitude</th>
-      <th>end_latitude</th>
-      <th>end_longitude</th>
-      <th>user_create_order</th>
-      <th>sum_order</th>
-      <th>"pick_time</th>
-      <th>created_at</th>
-      <th>"updated_at</th>
-      <th>cargo_type</th>
-      <th>city_id</th>
-      <th>city_name</th>
-      <th>"option_id"</th>
-      <th>"option_name</th>
-      <th>rate_id</th>
-      <th>"rate_name</th>
-      <th>order_status</th>
+      <th>Recipient Country Id</th>
+      <th>Recipient City Id</th>
+      <th>Recipient Phone</th>
+      <th>Recipient Address</th>
+      <th>Delivery Rate Id</th>
+      <th>Delivery Option Id</th>
+      <th>Cargo Type Id</th>
+      <th>Cargo Weight</th>
+      <th>Cargo Desc</th>
+      <th>Cargo Count</th>
+      <th>Managers Desc</th>
+      <th>Order Status Id</th>
+      <th>Start Latitude</th>
+      <th>Start Longitude</th>
+      <th>End Latitude</th>
+      <th>End Longitude</th>
+      <th>User Create Order</th>
+      <th>Sum Order</th>
+      <th>Pick Time</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th>Cargo Type</th>
+      <th>City Id</th>
+      <th>City Name</th>
+      <th>Option Id</th>
+      <th>Option Name</th>
+      <th>Rate Id</th>
+      <th>Rate Name</th>
+      <th>Order Status</th>
     </tr>
     <tbody id="myTable">
 
     </tbody>
   </table>
     <form class="form">
-      <input type="text" class="input" name="sender_fullname" placeholder="Имя отправителя">
-      <select name="sender_city_id">
+      <input type="text" class="input first-class" name="sender_fullname" placeholder="Имя отправителя">
+      <select name="sender_city_id" class="second-class">
         <option label="Худжанд"  value="1" selected></option>
         <option label="Душанбе" value="2"></option>
       </select>
-      <input type="text" class="input" name="sender_phone" placeholder="Телефон отправителя">
-      <input type="text" class="input" name="sender_address" placeholder="Адрес отправителя">
+      <input type="text" class="input third-class" name="sender_phone" placeholder="Телефон отправителя">
+      <input type="text" class="input first-class" name="sender_address" placeholder="Адрес отправителя">
       <input type="text" class="input" name="recipient_fullname" placeholder="Имя получателя">
       <select name="recipient_city_id">
         <option label="Худжанд" value="1" selected></option>
         <option label="Душанбе" value="2"></option>
       </select>
-          <input type="text" class="input" name="sender_address" placeholder="Адрес получателя">
+          <input type="text" class="input first-class" name="sender_address" placeholder="Адрес получателя">
           <select name="delivery_rate_id">
             <option label="1"  value="1" selected></option>
             <option label="2" value="2" selected></option>
@@ -76,19 +76,19 @@
             <option label="3" value="3" selected></option>
             <option label="4" value="4" selected></option>
           </select>
-          <select name="cargo_type_id">
+          <select name="cargo_type_id" class="first-class">
             <option label="1"  value="1" selected></option>
             <option label="2" value="2" selected></option>
           </select>
             <input type="text" class="input" name="cargo_weight" placeholder="Вес груза">
             <input type="text" class="input" name="cargo_desc" placeholder="Описание груза">
-            <input type="text" class="input" name="cargo_count" placeholder="Количество груза">
+            <input type="text" class="input first-class" name="cargo_count" placeholder="Количество груза">
             <input type="text" class="input" name="user_create_order" placeholder="Пользователь создающий заказ">
             <input type="text" class="input" name="sum_order" placeholder="Cумма груза">
-            <input type="datetime-local" name="pick_time">
-            <input type="text" class="input" name="driver_id" placeholder="">
+            <input type="datetime-local" class="input first-class" name="pick_time">
+            <input type="text" class="input" name="driver_id" placeholder="ID водителя">
 
-      <button type="submit" class="button form__button">
+      <button type="submit" class="button">
         Отправить
       </button>
     </form>
