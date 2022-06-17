@@ -1,48 +1,22 @@
 import Vue from 'vue'
-import { ToastPlugin, ModalPlugin } from 'bootstrap-vue'
-import VueCompositionAPI from '@vue/composition-api'
-
-import i18n from '@/libs/i18n'
-import router from './router'
-import store from './store'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import App from './App.vue'
-
-// Global Components
-import './global-components'
-
-// 3rd party plugins
-import '@axios'
-import '@/libs/acl'
-import '@/libs/portal-vue'
-import '@/libs/clipboard'
-import '@/libs/toastification'
-import '@/libs/sweet-alerts'
-import '@/libs/vue-select'
-import '@/libs/tour'
+import '@/assets/css/tailwind.css'
+import 'remixicon/fonts/remixicon.css'
+import router from './router'
+import {store} from './store'
 
 
-// BSV Plugin Registration
-Vue.use(ToastPlugin)
-Vue.use(ModalPlugin)
-
-// Composition API
-Vue.use(VueCompositionAPI)
-
-// Feather font icon - For form-wizard
-// * Shall remove it if not using font-icons of feather-icons - For form-wizard
-require('@core/assets/fonts/feather/iconfont.css') // For form-wizard
-
-// import core styles
-require('@core/scss/core.scss')
-
-// import assets styles
-require('@/assets/scss/style.scss')
+axios.defaults.baseURL = 'https://sip.gram.tj/api/';
+axios.defaults.headers.common['Authorization'] = 'Bearer ' + store.state.token;
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 Vue.config.productionTip = false
-
+Vue.use(VueAxios, axios)
 new Vue({
   router,
+  axios,
   store,
-  i18n,
   render: h => h(App),
 }).$mount('#app')
